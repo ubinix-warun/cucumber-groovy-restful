@@ -2,15 +2,9 @@
  * Created by warun on 5/2/16.
  */
 
-//import org.apache.log4j.Logger
-import cucumber.runtime.*
 import groovy.json.JsonSlurper
 import groovyx.net.http.HTTPBuilder;
 import static groovyx.net.http.ContentType.*
-//import static groovyx.net.http.Method.*
-//import groovyx.net.http.RESTClient
-import groovy.util.slurpersupport.GPathResult
-import groovyx.net.http.URIBuilder
 import org.apache.http.client.*
 
 this.metaClass.mixin(cucumber.runtime.groovy.Hooks)
@@ -42,7 +36,8 @@ When(~"I retrieve the results") { ->
     try {
         httpClient = new HTTPBuilder(target)
         httpClient.ignoreSSLIssues()
-        // TODO if Method
+        // TODO if Method GET/POST
+        // TODO disable log file?
         resp = httpClient.post([path: path,
                                 requestContentType: JSON,
                                 body: reqb])
