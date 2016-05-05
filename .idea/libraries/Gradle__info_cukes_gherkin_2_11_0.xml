@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: info.cukes:gherkin:2.11.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/gherkin/2.11.0/3a9ad80d9c4988b1294becbae7d8c41ee37272c/gherkin-2.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/info.cukes/gherkin/2.11.0/ef6ec90a7e582079783f36f32c307763b5d0b43f/gherkin-2.11.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

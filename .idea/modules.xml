@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cucumber-groovy-restful.iml" filepath="$PROJECT_DIR$/.idea/modules/cucumber-groovy-restful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cucumber-groovy-restful_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cucumber-groovy-restful_main.iml" group="cucumber-groovy-restful" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cucumber-groovy-restful_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cucumber-groovy-restful_test.iml" group="cucumber-groovy-restful" />
+    </modules>
+  </component>
+</project>
