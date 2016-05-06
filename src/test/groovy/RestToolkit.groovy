@@ -45,14 +45,26 @@ When(~"I retrieve the results") { ->
         status = ex.getStatusCode()
     }
     if (resp != null) {
-        slurper = new JsonSlurper()
-        parsed = slurper.parseText(resp.data)
+        if(resp.data != null) {
+            slurper = new JsonSlurper()
+            parsed = slurper.parseText(resp.data)
+        }else {
+            parsed = resp
+        }
     }
 }
 
 //Then(~"the status code should be \"(.*)\"") { String expectedStatusCode ->
 //    assert status == expectedStatusCode
 //}
+
+Then(~"show response") {  ->
+    println parsed
+}
+
+Then(~"size of \"(.*)\" as \"(.*)\"") { String field, String size->
+    assert parsed."${field}".size() == Integer.parseInt(size)
+}
 
 Then(~"it should have the field \"(.*)\" containing the value \"(.*)\"") { String field, String value ->
     assert parsed."${field}".toString().equals(value)
