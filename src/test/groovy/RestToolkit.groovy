@@ -19,6 +19,8 @@ def status = 0
 
 Given(~"I access the resource host \"([^\"]*)\"") { String host ->
     resp = null
+    reqb =  [:]
+    parsed = null
     target = host
 }
 
@@ -38,6 +40,7 @@ When(~"I retrieve the results") { ->
         httpClient.ignoreSSLIssues()
         // TODO if Method GET/POST
         // TODO disable log file?
+        // TODO path's valid?
         resp = httpClient.post([path: path,
                                 requestContentType: JSON,
                                 body: reqb])
