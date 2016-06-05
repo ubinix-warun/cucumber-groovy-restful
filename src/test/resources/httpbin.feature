@@ -7,5 +7,6 @@ Feature: Post "echo" message to https://httpbin.org/
     And I provide parameter "TEST" as "john"
     And I provide parameter "Sample" as "john"
     When I retrieve the results
-    Then it should have the field "TEST" containing the value "john"
+    Then the status code should be "200"
+    And it should have the field "TEST" containing the value "john"
     And it should have the field "Sample" containing the value "john"

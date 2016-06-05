@@ -44,8 +44,9 @@ When(~"I retrieve the results") { ->
         resp = httpClient.post([path: path,
                                 requestContentType: JSON,
                                 body: reqb])
+        status = 200
     } catch (HttpResponseException ex) {
-        status = ex.getStatusCode()
+        status = ex.getResponse().getStatus()
     }
     if (resp != null) {
         if(resp.data != null) {
@@ -57,9 +58,9 @@ When(~"I retrieve the results") { ->
     }
 }
 
-//Then(~"the status code should be \"(.*)\"") { String expectedStatusCode ->
-//    assert status == expectedStatusCode
-//}
+Then(~"the status code should be \"(.*)\"") { int expectedStatusCode ->
+    assert status == expectedStatusCode
+}
 
 Then(~"show response") {  ->
     println parsed
